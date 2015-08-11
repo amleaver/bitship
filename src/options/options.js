@@ -9,11 +9,11 @@ function save_options() {
     codeship_project_uuid: codeship_project_uuid
   }, function() {
     // Update status to let user know options were saved.
-    var status = document.getElementById('status');
-    status.textContent = 'Options saved.';
+    var status = document.getElementById('save');
+    status.textContent = 'Options saved!';
     setTimeout(function() {
-      status.textContent = '';
-    }, 750);
+      status.textContent = 'Save';
+    }, 1000);
   });
 }
 
@@ -30,6 +30,12 @@ function restore_options() {
     document.getElementById('codeship_project_uuid').value = items.codeship_project_uuid;
   });
 }
+
+function close_options() {
+  window.open('', '_self', ''); 
+  window.close();
+}
+
 document.addEventListener('DOMContentLoaded', restore_options);
-document.getElementById('save').addEventListener('click',
-    save_options);
+document.getElementById('save').addEventListener('click', save_options);
+document.getElementById('close').addEventListener('click', close_options);

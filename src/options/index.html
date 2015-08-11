@@ -27,7 +27,9 @@
 
 <h1>BitShip Options</h1>
 
-<form class="pure-form pure-form-aligned">
+<div id="status"></div>
+
+<div class="pure-form pure-form-aligned">
     <fieldset>
         <div class="pure-control-group">
             <label for="name">BitBucket Repository URL</label>
@@ -43,11 +45,12 @@
             <label for="name">Codeship Project UUID</label>
 			<input type="text" id="codeship_project_uuid" size="40" pattern="[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}" required>
         </div>
-
+        <div style="padding-top: 20px">
             <button type="save" id="save" class="pure-button pure-button-primary">Save</button>
+            <button type="button" id="close" class="pure-button">Close</button>
         </div>
     </fieldset>
-</form>
+</div>
 
 <script src="options.js"></script>
 </body>
