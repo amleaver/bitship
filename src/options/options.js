@@ -1,7 +1,7 @@
 // Saves options to chrome.storage
 function save_options() {
   	var bitbucket_url = document.getElementById('bitbucket_url').value;
-	var codeship_project_id = document.getElementById('codeship_project_id').value;
+  var codeship_project_id = document.getElementById('codeship_project_id').value;
 	var codeship_project_uuid = document.getElementById('codeship_project_uuid').value;
   chrome.storage.sync.set({
     bitbucket_url: bitbucket_url,
